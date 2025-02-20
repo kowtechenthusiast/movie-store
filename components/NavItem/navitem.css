@@ -1,0 +1,11 @@
+.nav-item {
+  position: relative;
+}
+.nav-item::before {
+  position: absolute;
+  top: 105%;
+  content: "";
+  height: 3px;
+  background-color: tomato;
+  width: 100%;
+}

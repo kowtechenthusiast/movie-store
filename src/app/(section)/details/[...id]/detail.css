@@ -1,0 +1,189 @@
+/* General Styles */
+.movie-details {
+  position: relative;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #ffffff, #f7f7f7);
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  background: rgba(255, 152, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 10px rgba(255, 152, 0, 0.2);
+}
+
+/* Movie Poster */
+.poster {
+  min-width: 390px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(255, 152, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.poster:hover {
+  transform: scale(1.05);
+}
+
+/* Movie Info */
+.info {
+  flex: 1;
+  color: #333;
+  padding: 10px;
+}
+
+/* Title */
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(255, 152, 0, 0.3);
+}
+
+/* Overview */
+.overview {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Details */
+.release,
+.rating,
+.language {
+  font-size: 15px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  color: #444;
+}
+
+.release::before,
+.rating::before,
+.language::before {
+  content: "• ";
+  font-size: 18px;
+  color: #ff9800;
+  margin-right: 5px;
+}
+
+/* Genre Badges */
+.genres {
+  margin-top: 15px;
+}
+
+.genre {
+  display: inline-block;
+  background: #ff9800;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px 5px 5px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.genre:hover {
+  background: #e68900;
+}
+
+/* Additional Info */
+.additional-info {
+  margin-top: 20px;
+  font-size: 15px;
+  background: rgba(255, 152, 0, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color: #444;
+}
+
+.additional-info p {
+  margin: 6px 0;
+}
+
+/* Production Companies */
+.production-companies {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.company {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 152, 0, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.company:hover {
+  transform: scale(1.05);
+}
+
+.company-logo {
+  width: 60px;
+  height: auto;
+  border-radius: 6px;
+  background: white;
+  padding: 5px;
+}
+
+.company p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Favourite Button */
+.favourite {
+  height: 55px;
+  background: white;
+  color: #ff9800;
+  border: 2px solid #ff9800;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+  outline: none;
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.favourite:hover {
+  background: #ff9800;
+  color: white;
+  box-shadow: 0 6px 12px rgba(255, 152, 0, 0.5);
+}
+
+.sorry {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 20vh;
+}
