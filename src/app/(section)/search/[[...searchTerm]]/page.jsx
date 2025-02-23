@@ -1,8 +1,8 @@
 import React from "react";
-import Result from "../../../../../components/Result/Result";
+import Result from "@/components/Result/Result";
 
 export default async function Search({ params }) {
-  const searchTerm = await params?.searchTerm;
+  const { searchTerm } = await params;
 
   const options = {
     method: "GET",

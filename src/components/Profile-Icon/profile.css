@@ -1,0 +1,40 @@
+.profile {
+  position: relative;
+  height: 100%;
+  padding: 5px;
+  animation: fadeIn 0.4s ease-in;
+}
+.user-icon {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.logout-box {
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-40%);
+  background-color: rgb(231, 231, 231);
+  padding: 10px 18px;
+  border-radius: 7px;
+  display: none;
+  transition: all 0.3s;
+  animation: fadeIn 0.35s ease-in;
+}
+.logout-box:hover {
+  background-color: ghostwhite;
+  box-shadow: inset 0px 0px 5px rgb(170, 170, 178);
+}
+
+.logout-box:disabled:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.profile:hover .logout-box {
+  display: block;
+}

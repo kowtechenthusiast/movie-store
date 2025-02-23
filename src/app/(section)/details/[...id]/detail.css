@@ -26,7 +26,8 @@
 
 /* Movie Poster */
 .poster {
-  min-width: 390px;
+  min-height: max-content;
+  min-width: max-content;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(255, 152, 0, 0.3);
   transition: transform 0.3s ease-in-out;
@@ -124,7 +125,7 @@
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .company {
@@ -154,36 +155,4 @@
   font-size: 14px;
   font-weight: bold;
   color: #333;
-}
-
-/* Favourite Button */
-.favourite {
-  height: 55px;
-  background: white;
-  color: #ff9800;
-  border: 2px solid #ff9800;
-  padding: 12px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
-  outline: none;
-  display: inline-block;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.favourite:hover {
-  background: #ff9800;
-  color: white;
-  box-shadow: 0 6px 12px rgba(255, 152, 0, 0.5);
-}
-
-.sorry {
-  font-size: 1.7rem;
-  text-align: center;
-  margin-top: 20vh;
 }

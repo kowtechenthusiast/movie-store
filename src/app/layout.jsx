@@ -1,7 +1,8 @@
-import Navbar from "../../components/Navbar/Navbar";
-import Ribbon from "../../components/Ribbon/Ribbon";
-import SearchBox from "../../components/SearchBox/SearchBox";
+import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
+import Ribbon from "@/components/Ribbon/Ribbon";
+import SearchBox from "@/components/SearchBox/SearchBox";
+import { ToastContainer } from "react-toastify";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
+        <ToastContainer position="top-right" autoClose="2000" />
         <Ribbon />
         <SearchBox />
         {children}

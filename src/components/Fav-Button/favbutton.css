@@ -1,0 +1,44 @@
+.fav-block {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+/* Favourite Button */
+.favourite {
+  height: 55px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  display: inline-block;
+}
+
+.fav-block .remove {
+  background: white;
+  color: #ff4d00;
+  border: 2px solid #ff4d00;
+  box-shadow: 0 4px 10px rgba(193, 116, 0, 0.3);
+}
+
+.fav-block .add {
+  background: white;
+  color: #ff9800;
+  border: 2px solid #ff9800;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+}
+
+.fav-block .remove:hover {
+  background: #ff4d00;
+  color: white;
+  box-shadow: 0 6px 12px rgba(193, 116, 0, 0.5);
+}
+
+.fav-block .add:hover {
+  background: #ff9800;
+  color: white;
+  box-shadow: 0 6px 12px rgba(255, 152, 0, 0.5);
+}

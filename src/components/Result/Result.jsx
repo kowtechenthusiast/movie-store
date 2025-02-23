@@ -4,7 +4,7 @@ import "./result.css";
 import Link from "next/link";
 import Pagination from "../Pagination/Pagination";
 
-export default async function Result({ result }) {
+export default async function Result({ result, category }) {
   const options = {
     method: "GET",
     headers: {
@@ -20,7 +20,7 @@ export default async function Result({ result }) {
   const genres = data.genres;
 
   if (result == undefined) {
-    return <p>No data found</p>;
+    return <p className="sorry">No data found</p>;
   } else
     return (
       <>
@@ -37,7 +37,7 @@ export default async function Result({ result }) {
             );
           })}
         </div>
-        <Pagination />
+        {category !== "fav" && <Pagination />}
       </>
     );
 }

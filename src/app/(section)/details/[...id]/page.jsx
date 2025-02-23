@@ -1,8 +1,25 @@
 import React from "react";
 import "./detail.css"; // Import CSS file
+import FavButton from "@/components/Fav-Button/FavButton";
+import { cookies } from "next/headers";
+import jwt from "jsonwebtoken";
+import User from "@/lib/models/user";
 
 export default async function MovieDetails({ params }) {
   const { id } = await params;
+  console.log(typeof id);
+  console.log(typeof id[0]);
+
+  const cookieStore = await cookies();
+  const token = cookieStore.get("token").value;
+  const decoded = jwt.verify(token, process.env.JWT_SECRET);
+  const email = decoded.email;
+
+  const user = await User.findOne({ email });
+
+  let isFav = false;
+  if (user.favourites?.includes(parseInt(id))) isFav = true;
+  console.log("Is faourite", isFav);
 
   const options = {
     method: "GET",
@@ -15,6 +32,7 @@ export default async function MovieDetails({ params }) {
   const urlID = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_KEY}`;
   const response = await fetch(urlID);
   const data = await response.json();
+  console.log(data);
 
   if (!data || data.success === false) {
     return <p className="sorry">Sorry... No Data Found</p>;
@@ -26,7 +44,6 @@ export default async function MovieDetails({ params }) {
     release_date,
     vote_average,
     poster_path,
-    backdrop_path,
     genres,
     original_language,
     production_companies,
@@ -40,16 +57,6 @@ export default async function MovieDetails({ params }) {
 
   return (
     <div className="movie-details">
-      {/* Background Image */}
-      {/* <div
-        className="backdrop"
-        style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${backdrop_path})`,
-        }}
-      >
-        <div className="overlay"></div>
-      </div> */}
-
       {/* Content Section */}
       <div className="content">
         {/* Movie Poster */}
@@ -114,7 +121,7 @@ export default async function MovieDetails({ params }) {
               </div>
             ))}
           </div>
-          <button className="favourite">Add Favourite</button>
+          <FavButton id={id[0]} email={email} isFav={isFav} />
         </div>
       </div>
     </div>

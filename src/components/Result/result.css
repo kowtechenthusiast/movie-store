@@ -1,0 +1,8 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 26px;
+  justify-content: center; /* ✅ Centers items in the last row */
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in;
+}

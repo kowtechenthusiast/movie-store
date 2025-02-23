@@ -1,5 +1,5 @@
+import Result from "@/components/Result/Result";
 import React from "react";
-import Result from "../../../../../components/Result/Result";
 
 export default async function page({ params }) {
   const { page } = await params;

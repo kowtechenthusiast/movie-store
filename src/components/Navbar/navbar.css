@@ -1,6 +1,6 @@
 .navbar {
   background-color: ghostwhite;
-  padding: 25px;
+  padding: 23px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,8 +11,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   font-size: 1.3rem;
+}
+
+.navbar ul li {
+  color: rgba(0, 0, 0, 0.782);
+  transition: all 0.2s;
+}
+
+.navbar ul li:hover {
+  color: black;
 }
 
 .app-name span:first-child {

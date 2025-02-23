@@ -8,13 +8,16 @@ export default function SearchBox() {
   const [query, setQuery] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    router.push(`/search/${query}`);
-    setQuery("");
+    if (query) {
+      router.push(`/search/${query}`);
+      setQuery("");
+    }
   };
 
   useEffect(() => {
     setQuery(""); // Set an initial value after hydration
   }, []);
+
   const path = usePathname();
 
   if (path.endsWith("/signin") || path.endsWith("/signup")) {
@@ -30,7 +33,6 @@ export default function SearchBox() {
         className="search-input"
         onChange={(e) => setQuery(e.target.value)}
         value={query}
-        required
       />
       <button type="submit" className="search-button">
         Search
