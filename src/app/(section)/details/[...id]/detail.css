@@ -156,3 +156,144 @@
   font-weight: bold;
   color: #333;
 }
+/* For screens up to 431px */
+@media (max-width: 431px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .poster {
+    min-height: 100px;
+    min-width: 100px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .info {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .overview {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .release,
+  .rating,
+  .language {
+    font-size: 13px;
+  }
+
+  .genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .genre {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .additional-info {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .production-companies {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company {
+    flex-direction: column;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .company-logo {
+    width: 50px;
+  }
+}
+
+/* For screens up to 541px */
+@media (max-width: 541px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 10px;
+    gap: 20px;
+  }
+
+  .poster {
+    min-height: 100px;
+    min-width: 100px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .info {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .overview {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .release,
+  .rating,
+  .language {
+    font-size: 14px;
+  }
+
+  .genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .genre {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .additional-info {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .production-companies {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .company-logo {
+    width: 55px;
+  }
+}

@@ -36,3 +36,36 @@
 .search-button:hover {
   background-color: rgb(159, 103, 0);
 }
+
+@media (max-width: 431px) {
+  .search-form {
+    margin-top: 40px;
+  }
+  .search-form input {
+    font-size: 1rem;
+  }
+
+  .search-button {
+    padding: 7px 12px;
+  }
+}
+
+@media (max-width: 325px) {
+  .search-form {
+    height: 50px;
+    margin-top: 40px;
+  }
+  .search-form input {
+    padding: 0px 9px;
+    font-size: 0.8rem;
+  }
+
+  .search-input {
+    padding: 0px 9px;
+  }
+
+  .search-button {
+    padding: 0px 9px;
+    font-size: 0.8rem;
+  }
+}

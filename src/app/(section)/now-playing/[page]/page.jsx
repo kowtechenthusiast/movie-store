@@ -1,6 +1,10 @@
 import Result from "@/components/Result/Result";
 import React from "react";
 
+export const metadata = {
+  title: "Now-Playing",
+};
+
 export default async function page({ params }) {
   const { page } = await params;
   const options = {

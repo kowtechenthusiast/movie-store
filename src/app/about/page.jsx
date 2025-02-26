@@ -1,5 +1,9 @@
 import "./about.css";
 
+export const metadata = {
+  title: "About",
+};
+
 export default function About() {
   return (
     <div className="about-content">
@@ -19,7 +23,7 @@ export default function About() {
           with the latest releases and trending content.
         </p>
 
-        <p style={{ textAlign: "center" }}>
+        <p className="clerk-link">
           This website is created using Next.js and{" "}
           <a href="https://go.clerk.com/fgJHKlt" target="_blank">
             Clerk

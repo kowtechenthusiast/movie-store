@@ -2,15 +2,8 @@
 import React from "react";
 import NavItem from "../NavItem/NavItem";
 import { usePathname } from "next/navigation";
+import "./ribbon.css";
 export default function Ribbon() {
-  const ribbon = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "30px",
-    fontSize: "1.5rem",
-    marginTop: "40px",
-  };
   const path = usePathname();
 
   if (path.endsWith("/signin") || path.endsWith("/signup")) {
@@ -18,7 +11,7 @@ export default function Ribbon() {
   }
 
   return (
-    <div style={ribbon}>
+    <div className="ribbon">
       <NavItem title="Top Rated" params="top-rated" />
       <NavItem title="Popular" params="popular" />
       <NavItem title="Now Playing " params="now-playing" />

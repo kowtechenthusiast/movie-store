@@ -4,7 +4,6 @@
   align-items: center;
 }
 
-/* Favourite Button */
 .favourite {
   height: 55px;
   padding: 12px 20px;
@@ -41,4 +40,26 @@
   background: #ff9800;
   color: white;
   box-shadow: 0 6px 12px rgba(255, 152, 0, 0.5);
+}
+
+@media (max-width: 431px) {
+  .favourite {
+    height: 45px;
+    padding: 1px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    position: relative;
+    top: 10px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 541px) {
+  .favourite {
+    margin-top: 30px;
+  }
 }

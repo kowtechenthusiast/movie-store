@@ -9,3 +9,30 @@
   background-color: tomato;
   width: 100%;
 }
+
+@media (max-width: 431px) {
+  .section {
+    white-space: nowrap;
+    padding: 15px 110px;
+    text-align: center;
+    display: block;
+    /* width: 70vh; */
+    border-radius: 20px;
+  }
+  .nav-item {
+    background-color: rgba(255, 166, 0, 0.347);
+  }
+  .nav-item::before {
+    display: none;
+  }
+}
+@media (max-width: 321px) {
+  .ribbon {
+    font-size: 1rem;
+    margin-top: 30px;
+    gap: 0px;
+  }
+  .section {
+    padding: 12px 110px;
+  }
+}

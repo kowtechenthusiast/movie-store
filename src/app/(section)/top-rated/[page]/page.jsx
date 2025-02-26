@@ -1,6 +1,10 @@
 import React from "react";
 import Result from "@/components/Result/Result";
 
+export const metadata = {
+  title: "Top-Rated",
+};
+
 export default async function TopRated({ params }) {
   const { page } = await params;
   const options = {

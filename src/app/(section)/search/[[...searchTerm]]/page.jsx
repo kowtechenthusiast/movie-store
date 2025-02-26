@@ -1,6 +1,14 @@
 import React from "react";
 import Result from "@/components/Result/Result";
 
+export const generateMetadata = async ({ params }) => {
+  const { searchTerm } = await params;
+
+  return {
+    title: `Search for ${searchTerm[0]}`,
+  };
+};
+
 export default async function Search({ params }) {
   const { searchTerm } = await params;
 

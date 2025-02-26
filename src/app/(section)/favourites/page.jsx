@@ -2,6 +2,11 @@ import Result from "@/components/Result/Result";
 import { cookies } from "next/headers";
 import React from "react";
 import jwt, { decode } from "jsonwebtoken";
+
+export const metadata = {
+  title: "Favourites",
+};
+
 export default async function page() {
   const cookieStore = await cookies();
   const token = cookieStore.get("token")?.value;

@@ -1,0 +1,35 @@
+.ribbon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 1.5rem;
+  margin-top: 40px;
+}
+
+@media (max-width: 541px) {
+  .ribbon {
+    gap: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 431px) {
+  .ribbon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    font-size: 1.3rem;
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 321px) {
+  .ribbon {
+    font-size: 1rem;
+    margin-top: 30px;
+    gap: 0px;
+  }
+}

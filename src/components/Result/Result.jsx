@@ -37,7 +37,7 @@ export default async function Result({ result, category }) {
             );
           })}
         </div>
-        {category !== "fav" && <Pagination />}
+        {category !== "fav" && category !== "home" && <Pagination />}
       </>
     );
 }

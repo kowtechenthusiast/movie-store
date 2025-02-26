@@ -8,7 +8,9 @@ export default function NavItem({ params, title }) {
   const genre = usePathname().split("/")[1];
   return (
     <Link href={`/${params}/1`}>
-      <div className={params == genre ? "nav-item" : ""}>{title}</div>
+      <div className={params == genre ? "section nav-item" : "section"}>
+        {title}
+      </div>
     </Link>
   );
 }

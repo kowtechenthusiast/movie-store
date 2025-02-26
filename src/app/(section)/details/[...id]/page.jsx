@@ -5,6 +5,10 @@ import { cookies } from "next/headers";
 import jwt from "jsonwebtoken";
 import User from "@/lib/models/user";
 
+export const metadata = {
+  title: "Details",
+};
+
 export default async function MovieDetails({ params }) {
   const { id } = await params;
   console.log(typeof id);

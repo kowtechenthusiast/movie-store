@@ -39,3 +39,10 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+@media (max-width: 431px) {
+  .btn {
+    padding: 7px 17px;
+    font-size: 1rem;
+  }
+}

@@ -1,6 +1,10 @@
 import Result from "@/components/Result/Result";
 import React from "react";
 
+export const metadata = {
+  title: "Popular",
+};
+
 export default async function page({ params }) {
   const { page } = await params;
   const options = {
