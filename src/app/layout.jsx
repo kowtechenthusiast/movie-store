@@ -3,6 +3,7 @@ import "./globals.css";
 import Ribbon from "@/components/Ribbon/Ribbon";
 import SearchBox from "@/components/SearchBox/SearchBox";
 import { ToastContainer } from "react-toastify";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: {
@@ -21,6 +22,7 @@ export default async function RootLayout({ children }) {
         <Ribbon />
         <SearchBox />
         {children}
+        <Footer />
       </body>
     </html>
   );

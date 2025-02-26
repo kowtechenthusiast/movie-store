@@ -11,8 +11,6 @@ export const metadata = {
 
 export default async function MovieDetails({ params }) {
   const { id } = await params;
-  console.log(typeof id);
-  console.log(typeof id[0]);
 
   const cookieStore = await cookies();
   const token = cookieStore.get("token").value;
@@ -23,20 +21,18 @@ export default async function MovieDetails({ params }) {
 
   let isFav = false;
   if (user.favourites?.includes(parseInt(id))) isFav = true;
-  console.log("Is faourite", isFav);
 
   const options = {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${process.env.API_KEY}`,
+      Authorization: `Bearer ${process.env.API_ACCESS_TOKEN}`,
     },
   };
 
   const urlID = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_KEY}`;
   const response = await fetch(urlID);
   const data = await response.json();
-  console.log(data);
 
   if (!data || data.success === false) {
     return <p className="sorry">Sorry... No Data Found</p>;

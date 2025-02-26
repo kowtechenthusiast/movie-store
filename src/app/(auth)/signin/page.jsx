@@ -4,7 +4,6 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import "../auth.css"; // Import CSS file
 import { useActionState, useState } from "react";
-// import { handleSignIn } from "@/lib/actions/user";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,8 +16,6 @@ export default function SignIn() {
     let password = formData.get("password");
 
     if (!email || !password) {
-      console.log("Fill all required fields");
-      toast.error("Fill all required fields");
       return;
     }
 
@@ -36,7 +33,6 @@ export default function SignIn() {
 
       if (response.ok) {
         toast.success("Login successful");
-        console.log("Login successful");
 
         router.push("/");
         router.refresh("/");

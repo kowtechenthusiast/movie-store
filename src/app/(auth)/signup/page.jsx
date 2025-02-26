@@ -12,13 +12,8 @@ export default function SignUp() {
   const handleSignUp = async (prevData, formData) => {
     let email = formData.get("email");
     let password = formData.get("password");
-    console.log(email);
-    console.log(password);
 
     if (!email || !password) {
-      toast.error("Fill all required fields");
-      console.log("Fill all required fields");
-
       return;
     }
 
@@ -36,7 +31,6 @@ export default function SignUp() {
 
       if (response.ok) {
         toast.success("User created successfully");
-        console.log("User created successfully");
 
         router.push("/signin");
       } else {

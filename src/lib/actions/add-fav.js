@@ -7,7 +7,6 @@ export const handleAddFav = async (id, email) => {
   try {
     await connect();
     const user = await User.findOne({ email });
-    console.log(user);
 
     user.favourites.push(id);
     await user.save();
@@ -20,8 +19,6 @@ export const handleAddFav = async (id, email) => {
 
 export const handleRemoveFav = async (id, email) => {
   try {
-    console.log(typeof id);
-
     await connect();
     const user = await User.findOne({ email });
 
