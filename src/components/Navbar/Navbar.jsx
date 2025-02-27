@@ -14,20 +14,20 @@ export default async function Navbar() {
     <div className="navbar">
       <ul>
         {!isAuthenticated ? (
-          <Link href="/signin">
-            <li>Sign In</li>
-          </Link>
+          <li>
+            <Link href="/signin">Sign In</Link>
+          </li>
         ) : (
           <li>
             <Profile />
           </li>
         )}
-        <Link href="/favourites">
-          <li>Favorites</li>
-        </Link>
-        <Link href="/about">
-          <li>About</li>
-        </Link>
+        <li>
+          <Link href="/favourites">Favorites</Link>
+        </li>
+        <li>
+          <Link href="/about">About</Link>
+        </li>
       </ul>
       <Link href="/">
         <div className="app-name">
