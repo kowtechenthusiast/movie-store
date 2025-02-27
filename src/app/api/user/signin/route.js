@@ -54,9 +54,6 @@ export const POST = async (request) => {
       maxAge: 86400,
       path: "/",
     });
-
-    console.log("Token stored: ", cookieStore.get("token").value);
-
     return NextResponse.json({ message: "Login successful" }, { status: 200 });
   } catch (error) {
     console.error("Error in user login:", error);
