@@ -13,14 +13,11 @@ export default async function page() {
 
   const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/getFav`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: decoded.email }),
-    }
-  );
+  const response = await fetch(`/api/getFav`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: decoded.email }),
+  });
 
   const data = await response.json();
 
