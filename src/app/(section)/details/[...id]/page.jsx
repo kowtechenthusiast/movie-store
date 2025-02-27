@@ -1,9 +1,9 @@
 import React from "react";
-import "./detail.css"; // Import CSS file
+import "./detail.css";
 import FavButton from "@/components/Fav-Button/FavButton";
-import { cookies } from "next/headers";
-import jwt from "jsonwebtoken";
 import User from "@/lib/models/user";
+import { getUserEmail } from "@/lib/actions/auth";
+import { connect } from "@/lib/connection/user";
 
 export const metadata = {
   title: "Details",
@@ -11,24 +11,12 @@ export const metadata = {
 
 export default async function MovieDetails({ params }) {
   const { id } = await params;
-
-  const cookieStore = await cookies();
-  const token = cookieStore.get("token").value;
-  const decoded = jwt.verify(token, process.env.JWT_SECRET);
-  const email = decoded.email;
-
+  const email = await getUserEmail();
+  await connect();
   const user = await User.findOne({ email });
 
   let isFav = false;
   if (user.favourites?.includes(parseInt(id))) isFav = true;
-
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: `Bearer ${process.env.API_ACCESS_TOKEN}`,
-    },
-  };
 
   const urlID = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_KEY}`;
   const response = await fetch(urlID);

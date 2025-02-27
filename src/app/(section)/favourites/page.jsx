@@ -1,22 +1,18 @@
 import Result from "@/components/Result/Result";
-import { cookies } from "next/headers";
 import React from "react";
-import jwt, { decode } from "jsonwebtoken";
+import { getUserEmail } from "@/lib/actions/auth";
 
 export const metadata = {
   title: "Favourites",
 };
 
 export default async function page() {
-  const cookieStore = await cookies();
-  const token = cookieStore.get("token")?.value;
-
-  const decoded = jwt.verify(token, process.env.JWT_SECRET);
+  const email = await getUserEmail();
 
   const response = await fetch(`/api/getFav`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: decoded.email }),
+    body: JSON.stringify({ email }),
   });
 
   const data = await response.json();
