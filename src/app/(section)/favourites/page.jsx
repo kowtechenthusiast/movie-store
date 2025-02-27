@@ -9,7 +9,7 @@ export const metadata = {
 export default async function page() {
   const email = await getUserEmail();
 
-  const response = await fetch(`/api/getFav`, {
+  const response = await fetch(`${NEXT_PUBLIC_API_URL}/api/getFav`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email }),
