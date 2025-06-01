@@ -5,12 +5,13 @@ export const generateMetadata = async ({ params }) => {
   const { searchTerm } = await params;
 
   return {
-    title: `Search for ${searchTerm[0]}`,
+    title: `Search for ${decodeURIComponent(searchTerm)}`,
   };
 };
 
 export default async function Search({ params }) {
   const { searchTerm } = await params;
+  const decodedTerm = decodeURIComponent(searchTerm);
 
   const options = {
     method: "GET",
@@ -20,7 +21,7 @@ export default async function Search({ params }) {
     },
   };
 
-  const url = `https://api.themoviedb.org/3//search/movie?query=${searchTerm}&page=1`;
+  const url = `https://api.themoviedb.org/3//search/movie?query=${decodedTerm}&page=1`;
   const res = await fetch(url, options);
   const result = await res.json();
 
@@ -35,7 +36,7 @@ export default async function Search({ params }) {
           color: "rgb(84, 83, 83)",
         }}
       >
-        Search results for "{searchTerm}"
+        Search results for "{decodedTerm}"
       </p>
       <Result result={result.results} />;
     </>

@@ -11,7 +11,7 @@ export default async function NowPlaying({ genres }) {
   };
   const url = `https://api.themoviedb.org/3//movie/now_playing?page=1`;
   const response = await fetch(url, options);
-  const data = await response.json();
+    const data = await response.json();
 
   return (
     <div>
