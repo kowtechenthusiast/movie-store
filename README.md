@@ -1,38 +1,70 @@
-You can view this project on https://movie-store-silk.vercel.app/
+# Movie Explorer and Personal Library
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://movie-store-silk.vercel.app/)
 
-## Getting Started
+A modern web application built with **Next.js 15** and **MongoDB** backend for exploring movies and managing your personal favorite movie library.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Movie Explorer and Personal Library is a sleek, responsive web app that allows users to search and explore movies across multiple categories such as Top Rated, Popular, Now Playing, and Upcoming. Users can create accounts to save and manage their personal favorite movies collection.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- **User Authentication**: Create an account, log in, and manage your personal movie library.
+- **Movie Search**: Search for movies by title.
+- **Sort & Filter**: Browse movies sorted by Top Rated, Popular, Now Playing, and Upcoming categories.
+- **Pagination**: Navigate through large sets of movies with easy-to-use pagination.
+- **Carousel Display**: Visually engaging carousel to showcase featured or trending movies.
+- **Personal Library**: Save your favorite movies to a personal account stored in MongoDB.
+- **Responsive Design**: Mobile-friendly and works smoothly across all device sizes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Demo
 
-## Deploy on Vercel
+Check out the live app here:  
+[https://movie-store-silk.vercel.app/](https://movie-store-silk.vercel.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+- **Frontend:** Next.js 15
+- **Backend:** Node.js API routes in Next.js
+- **Database:** MongoDB (for user data and favorite movies storage)
+- **Deployment:** Vercel
+
+---
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/movie-explorer-personal-library.git
+   cd movie-explorer-personal-library
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Setup environment variables:
+   Create a .env.local file in the root with the following variables:
+   ```bash
+    MONGO_URL = your_mongodb_connection_string
+    API_ACCESS_TOKEN = movie_database_access_token
+    API_KEY = movie_database_api_key
+    JWT_SECRET = jwt_secret_key
+    NEXT_PUBLIC_API_URL = http://localhost:3000/
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open *http://localhost:3000* to see the app.
