@@ -4,6 +4,8 @@ import Ribbon from "@/components/Ribbon/Ribbon";
 import SearchBox from "@/components/SearchBox/SearchBox";
 import { ToastContainer } from "react-toastify";
 import Footer from "@/components/Footer/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: {
@@ -22,12 +24,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <ToastContainer position="top-right" autoClose="2000" />
-        <Ribbon />
-        <SearchBox />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <ToastContainer position="top-right" autoClose="2000" />
+          <Ribbon />
+          <SearchBox />
+          {children}
+          <Analytics />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
